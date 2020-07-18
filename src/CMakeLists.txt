@@ -83,6 +83,7 @@ target_link_libraries( scotty3d
     ${OPENGL_LIBRARIES}
     ${FREETYPE_LIBRARIES}
     ${CMAKE_THREADS_INIT}
+    pthread
 )
 
 #-------------------------------------------------------------------------------
