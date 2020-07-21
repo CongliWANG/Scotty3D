@@ -73,7 +73,7 @@ void Viewer::init() {
   }
 
   // create window
-  string title = renderer ? "CMU462: " + renderer->name() : "CMU462";
+  string title = renderer ? "" + renderer->name() : "CMU462";
   window = glfwCreateWindow( DEFAULT_W, DEFAULT_H, title.c_str(), NULL, NULL );
   if (!window) {
     out_err("Error: could not create window!");
@@ -135,7 +135,7 @@ void Viewer::init() {
   // add lines for renderer and fps
   line_id_renderer  = osd_text->add_line(-0.95,  0.90, "Renderer", 
                                           18, Color(0.15, 0.5, 0.15));
-  line_id_framerate = osd_text->add_line(-0.98, -0.96, "Framerate", 
+  line_id_framerate = osd_text->add_line(-0.98, -0.96, "Frame Rate", 
                                           14, Color(0.15, 0.5, 0.15));
 
   // resize elements to current size
